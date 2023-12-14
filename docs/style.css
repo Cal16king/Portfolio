@@ -1,147 +1,93 @@
-body {color: indigo;
-background-color: Gainsboro;
-font-family: arial, helvetica, sans-serif; }
-/* CSS inheritance rules indicate that all elements inside the body will inherit the color and font-family properties that I set here on this BIG container element */
-
-body section section { background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); padding:2em;}
-
-body section {background-image: url("images/littleNewt.jpg"); padding:2em;}
-
-p {padding:1em; line-height:2em;}
-
-body section.writing {
-    background-color:purple;
-    margin:auto;
+body {
+  margin: 0;
+  color: #c362ae;
+  background-image: url("images/codecat.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: Georgia,serif;
+}
+h1{
+    text-align:auto;
+}
+section{
+    margin-top: 8%;
     padding:2em;
 
-   display:flex;
-   /* flex-direction:row; */
-    /*justify-content:space-around;*/
+}
+p
+{
+    font-size: 16pt;
+}
+figcaption
+{
+    color:#78cecb;
+}
+section.gallery
+{
+    text-align:center;
+}
+#content
+{
+    width: 75%;
+    float: right;
+    padding: 12px;
+}
+#header
+{
+    height: 10%;
+    color: #FFFFFF;
+    text-align: center;
+     padding-left: 20px;
+     padding-top: 20px;
+    font-family: "Arial";
 }
 
-section.writing figure {
-    flex:1;
-   padding: 3vw;
-    background-color:lemonchiffon;
-}
-
-section.writing div.analysis {
-      flex:3; 
-
-    padding: 3vw;
-    background-color:black;
-    color:white;
+#sidebar
+{
+    width: 200px;
+    float: left;
     
 }
 
-
-body section.gallery {
-   width: 80%;
-   margin:auto;
-    background-color: green; 
-    padding:2em; 
-    /*margin:auto;*/ 
-    display:flex;
-    flex-direction:row;
-    }
-
-/* ebb: This is a comment in CSS: 
- * Notice that the properties I set on the <body> element get passed down to elements inside it. So all my text is the color and font that I set here. 
- * If I want to change the styling of internal elements, I can just enter their names and apply CSS properties to them, following CSS syntax. 
- */
- 
- section.gallery figure {flex:1;}
-
-section.gallery figure#whale {
-    flex: 5; 
-    margin:auto; 
-    padding-top: 1vw; 
-    padding-bottom: 1vw; 
-    }
-figcaption {
-font-style: italic; 
-font-size: smaller;
+img.photo
+{
+    width:500px;
+    height:500px;
 }
 
-img.photo {max-width:500px; width:100%}
-/* If I want to style ANY element with the class of "photo" I could just write 
- * .photo { }
- *  */
-
-ol {list-style-type: lower-alpha;
-padding: 5em;
-    
+a {
+  color: #8dbd86;
 }
 
-/* unvisited link */
-a:link {
-  color: red;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    background-color: #786ED4;
 }
 
-/* visited link. I used a hexadecimal color code for something dark green that I picked from: 
- * https://www.w3schools.com/colors/colors_picker.asp  */
-a:visited {
-  color: #006600;
+li a {
+    font-family: Georgia;
+    font-size: 24pt;
+    display: block;
+    color: #c362ae;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
 }
 
-/* mouse over link */
-a:hover {
-  color: orange;
+li a:visited {
+    background-color: #4CAF50;
+    color: #FFFFFF;
 }
 
-/* selected link */
-a:active {
-  color: blue;
+li a:hover {
+    background-color: #78cecb;
+    color: #000000;
 }
 
-/*nav.menuA {text-align: center; font-size: 3vw; }*/
-/*  Units to try: em and vw. vw means a percentage of the viewport width 
- * and is often used in responsive web design (responsive to size of device screens)
- * em is also responsive: it is the width of the standard letter M in your font usually 16 px. 
- *  */
- 
- nav {background-color:aqua;
- display:flex;
- 
- }
 
- nav > img.photo {
-max-width:200px;
-     flex:1;
- }
- 
- nav > ul.menuB {
- list-style-type: none;
-flex:9;
-  
-}
-
-nav ul.menuB li {
-  display:inline;
-  font-size: 1.5vw; /*padding:2vw;*/
-  padding-left:1vw;
-  padding-right:1vw;
-  padding-top:5vw;
-  padding-bottom:10vw;
-
-
-}
-
-nav#menu {padding:2vw; }
- 
-.button { border:2px; border-style:solid; border-color:blue; padding:2vw; background-color:#E6E6FA; color:yellow; width:10%; display:inline;
- border-radius: 20px;
- }
- 
-/*  TimeMapper Section */
-section.timemap {width: 80%; margin:auto;}
- section.flex {display: flex;
-width:100%;;  
- }
- 
-div#kumu { flex:4;
-
- }
-.kumuDesc{flex:1}
-iframe#kumuPlot{width:100%; height:200%;}
- 
