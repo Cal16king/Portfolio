@@ -88,6 +88,15 @@ h1.header
   padding:12px;
 }
 
+img.portrait
+{
+    padding-left: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    width:850px;
+    height:1100px;
+    position:relative;
+}
 
 img.photo
 {
