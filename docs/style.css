@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color:#c362ae;
+  color:#873b77;
   font-family: Georgia,serif;
 }
 
@@ -110,6 +110,14 @@ img.photo
     float: left;
     
 }
-
+.WP
+{
+    width:75%;
+    text-align:center;
+    position:relative;
+    float:left;
+    font-size:24pt;
+    margin-top:auto;
+}
 
 
