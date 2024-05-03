@@ -9,26 +9,26 @@ declare variable $wordCounts :=
 
 declare variable $maxCount := max($wordCounts);
 
-(: Count occurrences of words of interest :)
+
 let $barWidth := 50
 let $barSpacing := 10
-let $bottomMargin := 40  (: Increased bottom margin for names under bars :)
-let $svgWidth := (count($wordsOfInterest) * ($barWidth + $barSpacing)) + $barSpacing + 100  (: Added extra width for translation :)
-let $svgHeight := 300 + $bottomMargin + 100  (: Added extra height for translation :)
+let $bottomMargin := 40 
+let $svgWidth := (count($wordsOfInterest) * ($barWidth + $barSpacing)) + $barSpacing + 100 
+let $svgHeight := 300 + $bottomMargin + 100  
 
 return
     <svg xmlns="http://www.w3.org/2000/svg" width="{$svgWidth}" height="{$svgHeight}">
-        <g transform="translate(50,20)"> <!-- Adjust translation values as needed -->
+        <g transform="translate(50,20)"> 
             {
                 for $i in 1 to count($wordsOfInterest)
                 let $word := $wordsOfInterest[$i]
                 let $color := $colors[$i]
                 let $count := $wordCounts[$i]
-                let $barHeight := $count * ($svgHeight - $barSpacing - $bottomMargin) div $maxCount  (: Scale the bar height based on the maximum count :)
+                let $barHeight := $count * ($svgHeight - $barSpacing - $bottomMargin) div $maxCount
                 let $x := ($i - 1) * ($barWidth + $barSpacing) + $barSpacing
                 let $y := $svgHeight - $barHeight - $bottomMargin
                 let $textX := $x + $barWidth div 2
-                let $textY := $svgHeight - $bottomMargin + 15  (: Position names below bars with some padding :)
+                let $textY := $svgHeight - $bottomMargin + 15 
 
                 return
                     <g>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" width="350" height="440">
-    <g transform="translate(50,20)"><!-- Adjust translation values as needed -->
+    <g transform="translate(50,20)">
         <g>
             <rect x="10" y="40" width="50" height="360" fill="blue"/>
             <text x="35" y="415" text-anchor="middle" fill="black">market</text>
